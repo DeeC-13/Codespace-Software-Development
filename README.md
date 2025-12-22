@@ -1,1 +1,1 @@
-Javascript challenges for Codespace Software Development at Edinburgh COllege
+Codespace Software Development at Edinburgh College
