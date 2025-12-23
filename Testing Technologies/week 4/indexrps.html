@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors Game</title>
+</head>
+<body>
+   <div class = container>    
+     <div class="col-m-6">
+       <div class = "rps-game">
+        <center><h1>Rock-Paper-Scissors</h1></center>
+       </div>
+     </div>
+   </div>
+   
+    <div class = container>  
+      <div class = row></div>   
+        <center><h2 class = "image">Make Your Selection</h2></center>
+        <div class = row></div>
+          <div class="col-md-4 col-sm-3", text-align: center, style="padding:8px; justify-items: center;">   
+            <img src="C:\Users\deeco\Desktop\Software development\testing technologies\week 4\img\rock.jpg"></img>
+            <img src="C:\Users\deeco\Desktop\Software development\testing technologies\week 4\img\paper.jpg"></img>
+            <img src="C:\Users\deeco\Desktop\Software development\testing technologies\week 4\img\scissors.jpg"></img>
+          </div>        
+        </div>
+      </div>
+
+      <div class = container>  
+        <div class = row></div>
+          <div class="col-m-4 col-sm-3", text-align: center, style="padding:8px;">   
+            <button id='rock' type="button">Rock</button>
+            <button id='paper' type="button">Paper</button>
+            <button id='scissors' type="button">Scissors</button>
+          </div>
+        </div>
+      </div>
+     
+    <div class = container> 
+        <div class="col-m-4 col-sm-3", style="padding:8px;">   
+          <div class = "players", style = 'background:pink;'>
+              <h3> Player Choice: </h3><span id='playerChoice'></span>
+              <h3> Computer Choice: </h3><span id='computerChoice'></span>
+              <h3> Result: </h3><span id='whoWon'></span>
+          </div>
+        </div>
+      </div> 
+    
+    <div class = container>  
+        <div class="col-m-4 col-sm-3", style="padding:2px;">   
+           <div class = "scoreboard", style = 'background:pink;'>
+            <h4> Player Score: </h4><span id='playerScore'></span>
+            <h4> Computer Score: </h4><span id='computerScore'></span>
+            <h4> </h4><span id='round'></span>
+           </div>
+        </div> 
+    </div> 
+    
+    <div class = container>  
+      <div class="col-m-4 col-sm-3", style="padding:8px;">   
+        <div class = "announcement", style = 'background:pink;'>
+          <center><h4> </h4><span id='theEnd'></span></center>
+        </div>
+      </div> 
+    </div> 
+
+    
+  <script src="JavaScript/js.code.rps.js"></script>
+
+</body>
+
+</html>
