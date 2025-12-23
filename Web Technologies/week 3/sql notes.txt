@@ -1,0 +1,49 @@
+
+CREATE TABLE products (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(255) NOT NULL,
+    item_desc VARCHAR(255) NOT NULL,
+    item_img VARCHAR(255)  NOT NULL,
+    item_price DECIMAL(8, 2) NOT NULL
+
+);
+
+
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    pass VARCHAR(50) NOT NULL,
+    reg_date DATETIME DEFAULT NOW()
+
+);
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT(10) NOT NULL,
+    total_price DECIMAL(8, 2) NOT NULL,
+    order_date DATETIME DEFAULT NOW()
+
+);
+
+CREATE TABLE order_contents (
+    content_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT(10) NOT NULL,
+    item_id INT(10) NOT NULL,
+    quantity INT(100) NOT NULL,
+    total_price DECIMAL(8, 2)NOT NULL
+
+);
+
+CREATE TABLE employee (
+    employee_id INT AUTO_INCREMENT PRIMARY KEY,
+    em_first_name VARCHAR(255) NOT NULL,
+    em_last_name VARCHAR(255) NOT NULL,
+    em_email VARCHAR(255) UNIQUE NOT NULL,
+    em_pass VARCHAR(255) NOT NULL,
+    start_date DATETIME DEFAULT NOW()
+
+);
+
+
