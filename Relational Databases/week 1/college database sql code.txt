@@ -1,0 +1,35 @@
+create table student (
+    studentID varchar(20) not null,
+    fullname varchar(100) not null,
+    email varchar(50) not null,
+    primary key(studentID)
+    );
+
+create table lecturer (
+    lecturerID varchar(20) not null,
+    lecturerfullname varchar(100) not null,
+    lectureremail varchar(100) not null,
+    departmentID varchar(20) not null,
+    PRIMARY KEY(lecturerID),
+    FOREIGN KEY(departmentID)
+);
+
+insert into student (
+    studentID,
+    fullname,
+    email)
+    VALUES(
+        'EC1234567',
+        'Fred Flintstone',
+        'fflintstone@edinburghcollege.ac.uk'
+        );
+
+insert into enrolement (
+    enrolementID,
+    studentID,
+    moduleID)
+    VALUES(
+        '1',
+        'EC1234567',
+        'H17344'
+        );
