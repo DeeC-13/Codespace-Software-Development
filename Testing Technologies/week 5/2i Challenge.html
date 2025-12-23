@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <body>
+      <h1>Can you guess higher or lower than the computer?</h1>
+        <h3>Choose a number between 1-10</h3>
+            
+        </br></br>
+
+        <label>Enter your number:
+          <input id="userGuess" type="num" required></label>
+
+            <h2 id="result"></h2>
+
+              <button onclick="game()">Submit guess</button>
+        
+    <script>         
+        //Uses math random up to 10 as a multiplier to set the computer guess range
+        const num = Math.floor(Math.random() * 10);
+        
+        function game() {
+
+        //Take user guess from input field
+        const userGuess = document.getElementById('userGuess').value;
+        
+        //for debugging   
+        console.log(num);
+        console.log(userGuess);
+        
+        //declare answer as empty variable
+        let answer = "";
+
+        //If statement to compare the numbers and return the appropriate response.
+                
+        if (num < userGuess) {
+            answer = `You answered ${userGuess}. The correct answer is lower.`
+        }
+        else if (num > userGuess) {
+            answer = `You answered ${userGuess}. The correct answer is higher.`
+        }
+        else {
+            answer = `You answered ${userGuess}. This is the correct answer!`
+        }
+        //for debugging
+        console.log(answer);
+
+        //Push the response to the HTML
+        document.getElementById("result").innerHTML = answer;
+
+        };
+            
+        /*This is what I managed to get done in roughly an hour.
+        If I had more time, I would have added some CSS styling
+        to make it all look better*/
+
+    </script>         
+           
+    </body>
+</html>
